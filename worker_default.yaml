@@ -1,0 +1,31 @@
+name: worker
+basepath:
+timezone: Asia/Bangkok
+port: 8080
+log:
+  level: debug
+  name: worker
+kafka:
+  consumer:
+    topicId: topic-1
+    groupId: group-1
+  producer:
+    topicId: important
+  addr: 
+      - localhost:9092
+database:
+  driver: postgres
+  name: database
+  host: localhost
+  port: 5432
+  username: user
+  password: P@ssw0rd1234
+  ssl: false
+  rootca:
+  cert:
+  key:
+redis:
+  address: 127.0.0.1:6379
+  username:
+  password:
+  db: 0

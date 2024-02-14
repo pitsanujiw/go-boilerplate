@@ -1,0 +1,33 @@
+definitions:
+  dto.HealthResponse:
+    properties:
+      message:
+        type: string
+    type: object
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: Member Activate provide information about activate of application.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Member Activate API
+  version: "1.0"
+paths:
+  /health:
+    get:
+      operationId: "1"
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dto.HealthResponse'
+      summary: health
+      tags:
+      - health
+swagger: "2.0"

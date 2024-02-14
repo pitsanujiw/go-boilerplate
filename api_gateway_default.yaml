@@ -1,0 +1,14 @@
+name: gateway
+basepath:
+timezone: Asia/Bangkok
+port: 6666
+log:
+  level: debug
+  name: gateway
+kafka:
+  producer:
+    topicId: topic-1
+  addr:
+    - localhost:9092
+gateway:
+  endpoint: 'http://localhost:5555'

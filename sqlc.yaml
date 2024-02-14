@@ -1,0 +1,21 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "pkg/database/queries"
+    schema: "pkg/database/migration"
+    gen:
+      go:
+        package: "gen"
+        out: "pkg/database/gen"
+        emit_db_tags: true
+        emit_result_struct_pointers: true
+        emit_all_enum_values: true
+        emit_enum_valid_method: true
+        emit_methods_with_db_argument: true
+        emit_empty_slices: true
+        emit_interface: true
+        emit_json_tags: true
+        sql_package: "pgx/v5"
+        # pgx/v5 allows marshalling jsonb out of the box
+        # https://docs.sqlc.dev/en/latest/reference/datatypes.html#json
+        # https://docs.sqlc.dev/en/latest/reference/config.html#type-overriding

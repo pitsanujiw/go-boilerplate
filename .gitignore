@@ -1,0 +1,12 @@
+*-tests.xml
+*.out
+.DS_Store
+docker
+***/__debug_bin*
+coverage
+output
+
+# ENV
+env.yaml
+worker_env.yaml
+api_gateway_env.yaml
